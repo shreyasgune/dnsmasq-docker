@@ -1,0 +1,30 @@
+#Disable DHCP
+no-dhcp-interface=eth0
+
+#All reverse lookups for private IP  ranges which are not found in our DNSMASQ config must be returend  as NO SUCH DOMAIN
+bogus-priv
+
+#domain
+domain=3031.net
+
+#addes domain part to  a simple name lookup
+expand-hosts
+
+#if you  dont want to look into your etc/hosts file
+#no-hosts
+
+#Point to a different host file
+#add-hosts=/etc/hostnames.txt
+
+#dont resolve this domain anywhere else other than my own network
+local=/3031.net/
+
+#never forward requests without . or domain stuff
+domain-needed
+
+## Where to forward DNS requests
+
+no-resolv
+no-poll
+server=8.8.8.8
+server=8.8.4.4
