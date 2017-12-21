@@ -1,5 +1,5 @@
-FROM paas-docker-artifactory.gannettdigital.com/paas-centos7-base:latest
-MAINTAINER Paas-Success <paas-success@gannett.com>
+FROM centos7
+MAINTAINER Shreyas Gune
 
 RUN yum clean all
 RUN yum -y install initscripts && yum clean all
